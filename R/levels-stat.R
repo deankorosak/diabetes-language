@@ -40,8 +40,6 @@ tokens <- tokens[1:100]
 
 n <- n[1:100]
 
-#k <- 10
-
 c <- c()
 
 sigma.norm <- c()
@@ -91,7 +89,7 @@ keywords.s <- ctokens[id]
 top <- intersect(keywords.s[1:100],tokens[1:100])
 
 
-################ plot example of words levels ##########################
+################ plot example of words levels in given timespan ##########################
 
 
 
@@ -106,12 +104,8 @@ x <- list("β-cell"=ehigh,"low"=elow)
 
 barcode(x,outerbox =F, xlim=c(0,1.4*10^6))
 
-#################################### plot levels of few top frequent words  #####################################
+#################################### plot levels of few top frequent words in a sequence ###################
 
-
-c <- c()
-
-sigma.norm <- c()
 
 text <- words[(3000000):(3002000)]
 
@@ -129,27 +123,6 @@ for (k in c(1:length(nm))) {
     
     el <- c(el, list(e))
     
-    d <- diff(e)
-
-    mean.d <- mean(d)
-
-    norm.d <- d/mean.d
-
-    sd.d <- sd(norm.d)
-
-    p <- 1/mean.d
-
-    norm.sd <- sd.d/sqrt(1-p)
-
-    av.norm.sd <- (2*n[k]-1)/(2*n[k]+2)
-
-    sd.av.norm.sd <- 1/(sqrt(n[k])*(1+2.8*n[k]^(-.865)))
-    
-    sigma.norm <- c(sigma.norm, norm.sd)
-
-    c <- c(c,(norm.sd - av.norm.sd)/sd.av.norm.sd)
-    
-
 }
 
 x <- setNames(as.list(el),nm)
