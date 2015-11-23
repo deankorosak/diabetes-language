@@ -1,3 +1,3 @@
 # diabetes-language
 
-placeholder for R diabetes-language code 
+placeholder for "language of diabetes"  R code 
