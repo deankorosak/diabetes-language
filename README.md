@@ -10,6 +10,10 @@ good-turing.R contains some Good-Turing estimations and predictions compared wit
 
 rank-diff.R scored keywords from wordstream according to changes in frequency ranks
 
+
 in folder R/aps:
+
+parse-aps-json.R json parser for APS metadata
+
 
 
